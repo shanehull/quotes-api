@@ -1,4 +1,4 @@
-name: Deploy Worker
+name: Deploy
 on:
   push:
     branches:
@@ -8,13 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v4
+      # - uses: actions/setup-go@v4
+      #   with:
+      #     go-version: '1.21'
+      - uses: acifani/setup-tinygo@v2
         with:
-          go-version: '1.21'
+          tinygo-version: '0.30.0'
       - name: Setup Templ
         shell: bash
         run: go install github.com/a-h/templ/cmd/templ@latest
-      - name: Build & Deploy Worker
+      - name: Build & Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
