@@ -1,0 +1,6 @@
+name = "quotes-api"
+main = "./build/worker.mjs"
+compatibility_date = "2023-08-01"
+
+[build]
+command = "make build"

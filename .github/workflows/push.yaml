@@ -1,0 +1,24 @@
+name: Deploy Worker
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    needs: test
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+      - name: Setup Templ
+        shell: bash
+        run: go install github.com/a-h/templ/cmd/templ@latest
+      - name: Build & Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          preCommands: templ generate

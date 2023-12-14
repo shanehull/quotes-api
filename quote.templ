@@ -1,0 +1,9 @@
+package main
+
+templ quote(text string, author string) {
+	<blockquote>
+        <i>{ text }</i>
+        <footer>{ author }</footer>
+    </blockquote>
+    <button hx-get="https://shanehull.dev/quote" hx-target="#quote-container" hx-trigger="click" hx-swap="innerHTML swap:0.4s">more plz</button>
+}
