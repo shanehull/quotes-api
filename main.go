@@ -17,17 +17,30 @@ func cors(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Access-Control-Allow-Methods", "GET")
 	w.Header().Add("Access-Control-Allow-Headers", "Content-Type, hx-current-url, hx-request, hx-trigger, hx-target")
 	w.Header().Add("Content-Type", "text/html; charset=utf-8")
+}
 
-	if req.Method == "OPTIONS" {
+func methods(w http.ResponseWriter, req *http.Request) {
+	switch req.Method {
+	case http.MethodGet:
+		// we allow - how good!
+	case http.MethodOptions:
 		w.WriteHeader(http.StatusNoContent)
+		return
+	default:
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
 }
 
+func genRandIndex() int {
+	return globalRand.Intn(len(quotes))
+}
+
 func quoteHandler(w http.ResponseWriter, req *http.Request) {
 	cors(w, req)
+	methods(w, req)
 
-	idx := globalRand.Intn(len(quotes))
+	idx := genRandIndex()
 
 	component := quote(quotes[idx].Text, quotes[idx].Author)
 
