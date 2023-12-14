@@ -19,7 +19,13 @@ func cors(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content-Type", "text/html; charset=utf-8")
 }
 
-func methods(w http.ResponseWriter, req *http.Request) {
+func genRandIndex() int {
+	return globalRand.Intn(len(quotes))
+}
+
+func quoteHandler(w http.ResponseWriter, req *http.Request) {
+	cors(w, req)
+
 	switch req.Method {
 	case http.MethodGet:
 		// we allow - how good!
@@ -30,15 +36,6 @@ func methods(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-}
-
-func genRandIndex() int {
-	return globalRand.Intn(len(quotes))
-}
-
-func quoteHandler(w http.ResponseWriter, req *http.Request) {
-	cors(w, req)
-	methods(w, req)
 
 	idx := genRandIndex()
 
