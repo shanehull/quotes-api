@@ -51,11 +51,15 @@ var quotes = []Quotes{
 		Author: "Charles T. Munger",
 	},
 	{
+		Text:   "Show me the incentive and I'll show you the outcome.",
+		Author: "Charles T. Munger",
+	},
+	{
 		Text:   "History never repeats itself. Man always does.",
 		Author: "M. de Voltaire",
 	},
 	{
-		Text:   "Do not seek to follow in the footsteps of the wise. Seek what they sought.",
+		Text:   "Do not seek to follow in the footsteps of the wise; seek what they sought.",
 		Author: "Matsuo Basho",
 	},
 	{
@@ -67,7 +71,7 @@ var quotes = []Quotes{
 		Author: "Kongzi",
 	},
 	{
-		Text:   "The flame that burns twice as bright burns half as long.",
+		Text:   "The world is ruled by letting things take their course. It cannot be ruled by interfering.",
 		Author: "Laozi",
 	},
 }
