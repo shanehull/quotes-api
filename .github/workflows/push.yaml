@@ -20,7 +20,7 @@ jobs:
           tinygo-version: "0.30.0"
       - name: Setup Templ
         shell: bash
-        run: go install github.com/a-h/templ/cmd/templ@v0.2.501
+        run: go install github.com/a-h/templ/cmd/templ@latest
       - name: Build & Deploy
         uses: cloudflare/wrangler-action@v3
         with:
