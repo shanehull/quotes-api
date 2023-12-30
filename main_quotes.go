@@ -1,11 +1,11 @@
 package main
 
-type Quotes struct {
+type Quote struct {
 	Text   string `json:"text"`
 	Author string `json:"author"`
 }
 
-var quotes = []Quotes{
+var quotes = []Quote{
 	{
 		Text:   "With all things being equal, the simplest explanation tends to be the right one.",
 		Author: "William of Ockham",
@@ -51,11 +51,15 @@ var quotes = []Quotes{
 		Author: "Charles T. Munger",
 	},
 	{
+		Text:   "Show me the incentive and I'll show you the outcome.",
+		Author: "Charles T. Munger",
+	},
+	{
 		Text:   "History never repeats itself. Man always does.",
 		Author: "M. de Voltaire",
 	},
 	{
-		Text:   "Do not seek to follow in the footsteps of the wise. Seek what they sought.",
+		Text:   "Do not seek to follow in the footsteps of the wise; seek what they sought.",
 		Author: "Matsuo Basho",
 	},
 	{
@@ -63,11 +67,23 @@ var quotes = []Quotes{
 		Author: "Carl Richards",
 	},
 	{
-		Text:   "The beginning of wisdom is the ability to call things by their right names.",
+		Text:   "To know what you know and what you do not know, that is true knowledge.",
 		Author: "Kongzi",
 	},
 	{
-		Text:   "The flame that burns twice as bright burns half as long.",
+		Text:   "The world is ruled by letting things take their course. It cannot be ruled by interfering.",
 		Author: "Laozi",
+	},
+	{
+		Text:   "Force is followed by loss of strength.",
+		Author: "Laozi",
+	},
+	{
+		Text:   "It is better to be vaguely right than exactly wrong.",
+		Author: "Carveth Read",
+	},
+	{
+		Text:   "Everything should be made as simple as possible, but no simpler.",
+		Author: "Not Einstein",
 	},
 }

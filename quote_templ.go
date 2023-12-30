@@ -41,7 +41,7 @@ func quote(text string, author string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</footer></blockquote><button hx-get=\"https://shanehull.dev/quote\" hx-target=\"#quote-container\" hx-trigger=\"click\" hx-swap=\"innerHTML swap:0.4s\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</footer></blockquote><button hx-get=\"/quote\" hx-target=\"#quote-container\" hx-trigger=\"click\" hx-swap=\"innerHTML swap:0.4s\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
