@@ -1,6 +1,6 @@
 module github.com/shanehull/quotes-api
 
-go 1.21.3
+go 1.21.5
 
 toolchain go1.21.5
 
