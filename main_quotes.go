@@ -1,11 +1,11 @@
 package main
 
-type Quotes struct {
+type Quote struct {
 	Text   string `json:"text"`
 	Author string `json:"author"`
 }
 
-var quotes = []Quotes{
+var quotes = []Quote{
 	{
 		Text:   "With all things being equal, the simplest explanation tends to be the right one.",
 		Author: "William of Ockham",
