@@ -15,7 +15,8 @@ var globalRand = rand.New(rand.NewSource(time.Now().UnixNano()))
 func cors(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Access-Control-Allow-Origin", "*")
 	w.Header().Add("Access-Control-Allow-Methods", "GET")
-	w.Header().Add("Access-Control-Allow-Headers", "Content-Type, hx-current-url, hx-request, hx-trigger, hx-target")
+	w.Header().
+		Add("Access-Control-Allow-Headers", "Content-Type, hx-current-url, hx-request, hx-trigger, hx-target")
 	w.Header().Add("Content-Type", "text/html; charset=utf-8")
 }
 
