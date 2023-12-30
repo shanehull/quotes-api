@@ -67,11 +67,23 @@ var quotes = []Quotes{
 		Author: "Carl Richards",
 	},
 	{
-		Text:   "The beginning of wisdom is the ability to call things by their right names.",
+		Text:   "To know what you know and what you do not know, that is true knowledge.",
 		Author: "Kongzi",
 	},
 	{
 		Text:   "The world is ruled by letting things take their course. It cannot be ruled by interfering.",
 		Author: "Laozi",
+	},
+	{
+		Text:   "Force is followed by loss of strength.",
+		Author: "Laozi",
+	},
+	{
+		Text:   "It is better to be vaguely right than exactly wrong.",
+		Author: "Carveth Read",
+	},
+	{
+		Text:   "Everything should be made as simple as possible, but no simpler.",
+		Author: "Not Einstein",
 	},
 }
